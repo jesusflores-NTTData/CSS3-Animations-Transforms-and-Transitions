@@ -1,0 +1,40 @@
+/* 
+
+translate -> moves elements in vertical and horizontal directions
+
+transform: translate(); -> syntax
+
+translate(x); -> moves element x pixels to the right
+translate(x, y); -> moves element x pixels to the right and y pixels down
+
+translateX(x); -> moves element x pixels to the right
+translateY(y); -> moves element y pixels down
+
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate
+
+*/
+
+.wrapper {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed red;
+  margin: 0 auto;
+}
+
+.inner {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+
+  /* translate(x); -> moves element x pixels to the right */
+  /* transform: translate(150px); */
+
+  /* translate(x, y); -> moves element x pixels to the right and y pixels down */
+  /* transform: translate(150px, 150px); */
+
+  /* translateX(x); -> moves element x pixels to the right */
+  /* transform: translateX(150px); */
+
+  /* translateY(y); -> moves element y pixels down */
+  transform: translateY(150px);
+}
