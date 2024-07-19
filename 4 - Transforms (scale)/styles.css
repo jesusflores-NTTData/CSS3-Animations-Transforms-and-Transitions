@@ -1,0 +1,41 @@
+/* 
+
+scale -> scales the element by the given factor in a 2d plane (number or decimal)
+transform: scale(); -> syntax
+
+scale(x, y); -> scales the element by the given factor in the x and y axis
+scale(x); -> scales the element by the given factor in the x-axis
+scaleX(x); -> scales the element by the given factor in the x-axis
+scaleY(y); -> scales the element by the given factor in the y-axis
+
+x, y = [0,1] -> decreasing
+x, y = [1,x] -> increasing
+
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/scale
+
+*/
+
+.wrapper {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed red;
+  margin: 0 auto;
+}
+
+.inner {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+
+  /* scale(x, y); -> scales the element by the given factor in the x and y axis */
+  transform: scale(2, 2);
+
+  /* scale(x); -> scales the element by the given factor in the x-axis */
+  transform: scale(2);
+
+  /* scaleX(x); -> scales the element by the given factor in the x-axis */
+  transform: scaleX(2);
+
+  /* scaleY(y); -> scales the element by the given factor in the y-axis */
+  transform: scaleY(2);
+}
