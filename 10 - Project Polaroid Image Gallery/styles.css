@@ -1,0 +1,73 @@
+body {
+  background: url("./img/bg.jpg") repeat;
+}
+
+.Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+
+  .PolaroidCard {
+    height: fit-content;
+    width: fit-content;
+    background-color: #f7f1e1;
+    margin: 0;
+    box-shadow: 5px 12px 5px 0px #59595996;
+
+    img {
+      height: 200px;
+      width: 200px;
+      padding: 1rem;
+    }
+
+    .PolaroidCard__Caption {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  .PolaroidCard:nth-of-type(even) {
+    transform: rotate(-7deg);
+    padding-bottom: 1.563rem;
+  }
+
+  .PolaroidCard:nth-of-type(odd) {
+    transform: rotate(10deg);
+  }
+
+  .PolaroidCard:nth-of-type(even)::before {
+    content: "";
+    display: block;
+    background-color: #f0f8ff94;
+    width: 100px;
+    height: 25px;
+    transform: translate(60px, -15px);
+  }
+
+  .PolaroidCard:nth-of-type(odd)::before {
+    content: "";
+    display: block;
+    background-color: #f0f8ff94;
+    width: 100px;
+    height: 25px;
+    transform: rotate(-20deg) translate(-32px, -10px);
+  }
+
+  .PolaroidCard:nth-of-type(odd)::after {
+    content: "";
+    display: block;
+    background-color: #f0f8ff94;
+    width: 100px;
+    height: 25px;
+    transform: rotate(20deg) translate(60px, -325px);
+  }
+
+  .PolaroidCard:hover {
+    transform: scale(1.5);
+  }
+}
