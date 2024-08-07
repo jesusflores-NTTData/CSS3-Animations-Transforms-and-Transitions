@@ -1,0 +1,55 @@
+/* 
+
+transition-timing-function: predefined-function;
+ease: slow at the beginning, then fast, then slow at the end
+linear: constant speed
+ease-in: slow at the beginning
+ease-out: slow at the end
+ease-in-out: slow at the beginning and end
+step-start: jumps to the final value
+step-end: jumps to the initial value
+
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rosybrown;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  &.ease {
+    transition: margin-left 2s ease;
+  }
+  &.linear {
+    transition: margin-left 2s linear;
+  }
+  &.ease-in {
+    transition: margin-left 2s ease-in;
+  }
+  &.ease-out {
+    transition: margin-left 2s ease-out;
+  }
+  &.ease-in-out {
+    transition: margin-left 2s ease-in-out;
+  }
+  &.step-start {
+    transition: margin-left 2s step-start;
+  }
+  &.step-end {
+    transition: margin-left 2s step-end;
+  }
+}
+
+.container:hover .box {
+  margin-left: 90%;
+}

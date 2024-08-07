@@ -1,0 +1,32 @@
+/* 
+
+transition-property: property name;
+transition-duration: duration;
+transition-timing-function: timing function;
+transition-delay: delay;
+
+transition: property duration timing-function delay;
+
+*/
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.inner {
+  width: 300px;
+  height: 300px;
+  background-color: aliceblue;
+  transition-property: background-color, width, height, border-radius;
+  transition-duration: 5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0.5s;
+}
+
+.inner:hover {
+  background-color: aquamarine;
+  width: 400px;
+  height: 400px;
+  border-radius: 4px;
+}

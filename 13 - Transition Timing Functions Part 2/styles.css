@@ -1,0 +1,41 @@
+/* 
+
+transition-timing-function: steps(n, jump-none|jump-start|jump-end|jump-both|start|end);
+n: number of intervals
+start: jumps to the initial value
+end: jumps to the final value
+
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rosybrown;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition-property: margin-left;
+  transition-duration: 5s;
+
+  &.steps {
+    transition-timing-function: steps(10);
+  }
+  &.steps-start {
+    transition-timing-function: steps(10, start);
+  }
+  &.steps-end {
+    transition-timing-function: steps(10, end);
+  }
+}
+
+.container:hover .box {
+  margin-left: 90%;
+}

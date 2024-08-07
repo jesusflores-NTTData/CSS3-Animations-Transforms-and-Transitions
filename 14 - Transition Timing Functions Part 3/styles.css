@@ -1,0 +1,41 @@
+/* 
+
+transition-timing-function: steps(n, jump-none|jump-start|jump-end|jump-both|start|end);
+n: number of intervals
+start: jumps to the initial value
+end: jumps to the final value
+
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rosybrown;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition-property: margin-left;
+  transition-duration: 5s;
+
+  &.cubic-bezier1 {
+    transition-timing-function: cubic-bezier(1, 0.36, 0, 0.95);
+  }
+  &.cubic-bezier2 {
+    transition-timing-function: cubic-bezier(0.57, 1, 0.96, 0.05);
+  }
+  &.cubic-bezier3 {
+    transition-timing-function: cubic-bezier(0, 1.47, 0.6, 0.81);
+  }
+}
+
+.container:hover .box {
+  margin-left: 90%;
+}
