@@ -1,0 +1,29 @@
+/* 
+
+transform-origin -> changes the origin of the element
+transform-origin: x y -> syntax
+units: left, right, top, bottom, center, %, px, em, rem, vw, vh, vmin, vmax
+transform-origin: center center | 50% 50% -> default value
+transform-origin: top left | 0% 0%
+
+See: https://developer.mozilla.org/en-US/docs/Web/CSS/transform-origin
+
+*/
+
+.wrapper {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed red;
+  margin: 0 auto;
+}
+
+.inner {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+  transform-origin: center center;
+  transform-origin: top left;
+  transform-origin: top right;
+  transform-origin: bottom right;
+  transform: rotate(15deg);
+}

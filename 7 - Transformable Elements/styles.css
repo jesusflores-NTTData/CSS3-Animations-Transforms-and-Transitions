@@ -1,0 +1,27 @@
+/* 
+
+elements -> block level and inline level
+transformables -> block levels
+non-transformables -> inline levels
+
+*/
+
+.wrapper {
+  width: 300px;
+  height: 300px;
+  border: 1px dashed red;
+  margin: 0 auto;
+}
+
+.inner {
+  width: 300px;
+  height: 300px;
+  border: 1px solid black;
+
+  transform: rotate(45deg);
+}
+
+.inline {
+  display: inline-block;
+  transform: rotate(45deg);
+}
