@@ -1,0 +1,38 @@
+/* 
+
+transition-property: property_name1, property_name2, ...;
+transition-duration: duration;
+transition-timing-function: timing-function;
+transition-delay: delay;
+
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rosybrown;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  &.together {
+    transition-property: background-color, transform;
+    transition-duration: 5s;
+    transition-timing-function: cubic-bezier(0.57, 1, 0.96, 0.05);
+    transition-delay: 2s;
+  }
+}
+
+.container:hover .box {
+  background-color: tomato;
+  transform: translateX(500px);
+}

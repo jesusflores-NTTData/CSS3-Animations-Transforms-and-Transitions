@@ -1,0 +1,29 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    padding: 1rem;
+  }
+
+  .rocket {
+    font-size: 100px;
+    width: 140px;
+    transition: rotate 0.5s linear, margin-left 1.2s linear 0.5s;
+  }
+}
+
+.container:hover .rocket {
+  margin-left: 90%;
+  rotate: 45deg;
+}

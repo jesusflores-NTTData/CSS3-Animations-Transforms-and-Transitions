@@ -1,0 +1,33 @@
+/* 
+
+transition: property duration timing-function delay;
+
+*/
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: rosybrown;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  &.together {
+    transition: background-color 5s cubic-bezier(0.57, 1, 0.96, 0.05) 5s,
+      transform 15s cubic-bezier(0.57, 1, 0.96, 0.05) 2s;
+  }
+}
+
+.container:hover .box {
+  background-color: tomato;
+  transform: translateX(500px);
+}

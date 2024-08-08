@@ -67,7 +67,16 @@ body {
     transform: rotate(20deg) translate(60px, -325px);
   }
 
-  .PolaroidCard:hover {
-    transform: scale(1.5);
+  .PolaroidCard:nth-of-type(odd) {
+    transition: transform 0.5s;
+    &:hover {
+      transform: rotate(360deg) scale(1.4);
+    }
+  }
+  .PolaroidCard:nth-of-type(even) {
+    transition: transform 1.5s ease-in-out 0.5s;
+    &:hover {
+      transform: rotate(-360deg) scale(1.7);
+    }
   }
 }
