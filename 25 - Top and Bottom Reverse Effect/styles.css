@@ -43,7 +43,8 @@ body {
     }
   }
 
-  .link1 {
+  .link1,
+  .link2 {
     background-color: #007bff;
     a {
       text-decoration: none;
@@ -53,24 +54,25 @@ body {
 
       &::before {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
         content: "";
         display: block;
         background-color: rgba(87, 217, 240, 0.639);
-        width: 0;
-        transition: all 0.3s;
-        opacity: 0;
       }
       &::after {
         position: absolute;
         bottom: 0;
         right: 0;
         content: "";
-        width: 0;
         display: block;
         background-color: rgba(87, 217, 240, 0.639);
-        transition: all 0.3s;
+      }
+      &::before,
+      &::after {
+        width: 0;
+        height: 0;
+        transition: width 0.5s, height 0.3s;
       }
     }
 
@@ -78,8 +80,7 @@ body {
       &::after,
       &::before {
         height: 2px;
-        width: 50%;
-        opacity: 1;
+        width: 100%;
       }
     }
   }

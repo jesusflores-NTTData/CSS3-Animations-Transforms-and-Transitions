@@ -43,43 +43,40 @@ body {
     }
   }
 
-  .link1 {
+  .link1,
+  .link2 {
     background-color: #007bff;
     a {
       text-decoration: none;
       font-size: 16px;
       font-weight: bold;
       position: relative;
+      overflow: hidden;
+      height: 1rem;
 
       &::before {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
+        content: attr(initial-text);
         display: block;
-        background-color: rgba(87, 217, 240, 0.639);
-        width: 0;
-        transition: all 0.3s;
-        opacity: 0;
+        bottom: 0;
+        transition: bottom 0.5s;
       }
+
       &::after {
         position: absolute;
-        bottom: 0;
-        right: 0;
-        content: "";
-        width: 0;
+        content: attr(switch-text);
         display: block;
-        background-color: rgba(87, 217, 240, 0.639);
-        transition: all 0.3s;
+        bottom: -100%;
+        transition: bottom 0.5s;
       }
-    }
 
-    a:hover {
-      &::after,
-      &::before {
-        height: 2px;
-        width: 50%;
-        opacity: 1;
+      &:hover {
+        &::before {
+          bottom: 100%;
+        }
+        &::after {
+          bottom: 0;
+        }
       }
     }
   }

@@ -1,3 +1,15 @@
+/* 
+Steps to create an animation effect:
+
+(Questions before starting)
+- What are the elements that will be animated? (buttons, links, images, etc.) (Create structure)
+- What is the effect we want to create? (Decide the effect)
+- How animation will be triggered? (hover, click, etc.) (Create the trigger)
+- What are the properties that will be animated? (color, width, height, etc.) (Decide the properties)
+- How will be the behavior of the animation? (duration, timing function, delay, etc.) (Decide the behavior)
+
+*/
+
 html,
 body {
   margin: 0;
