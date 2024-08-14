@@ -1,0 +1,71 @@
+/* 
+
+@keyframes name-of-animation {
+  0% {
+    property: value;
+  }
+  50% {
+    property: value;
+  }
+  100% {
+    property: value;
+  }
+}
+
+@keyframes name-of-animation {
+  from {
+    property: value;
+  }
+  to {
+    property: value;
+  }
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: beige;
+  cursor: pointer;
+  animation: moveAround 10s infinite;
+}
+
+@keyframes moveAround {
+  0% {
+    margin-top: 0;
+    margin-left: 0;
+    background-color: blanchedalmond;
+  }
+  25% {
+    margin-left: 300px;
+    margin-top: 0;
+  }
+  50% {
+    margin-left: 300px;
+    margin-top: 300px;
+  }
+  75% {
+    margin-left: -300px;
+    margin-top: 300px;
+  }
+  100% {
+    margin-left: -300px;
+    margin-top: 0;
+  }
+}

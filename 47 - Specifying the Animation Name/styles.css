@@ -1,0 +1,40 @@
+/* 
+
+animation-name: name-of-animation;
+animation-duration: 10s;
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  background-color: beige;
+  cursor: pointer;
+  animation-name: rotate;
+  animation-duration: 2s;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,41 @@
+/* 
+
+Animation Timing Functions
+
+The animation-timing-function property specifies the speed curve of the animation.
+
+animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n) | steps(n,start|end)
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.sprite {
+  background-image: url("images/doraemon.png");
+  height: 317px;
+  width: 245px;
+  animation: moveSprite 3s steps(6) infinite;
+}
+
+@keyframes moveSprite {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -1490px 0;
+  }
+}
