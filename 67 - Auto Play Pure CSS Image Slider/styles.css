@@ -1,0 +1,82 @@
+/* 
+
+Animation Timing Functions
+
+The animation-timing-function property specifies the speed curve of the animation.
+
+animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n) | steps(n,start|end)
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: cornflowerblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+
+  .slider {
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+    .slides {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      animation: slideToRight 15s linear infinite;
+      img {
+        aspect-ratio: 5 / 3;
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@keyframes slideToRight {
+  0% {
+    transform: translateX(0);
+  }
+  15% {
+    transform: translateX(-100%);
+  }
+  20% {
+    transform: translateX(-100%);
+  }
+  30% {
+    transform: translateX(-200%);
+  }
+  35% {
+    transform: translateX(-200%);
+  }
+  45% {
+    transform: translateX(-300%);
+  }
+  50% {
+    transform: translateX(-300%);
+  }
+  60% {
+    transform: translateX(-400%);
+  }
+  65% {
+    transform: translateX(-400%);
+  }
+  75% {
+    transform: translateX(-500%);
+  }
+  80% {
+    transform: translateX(-500%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

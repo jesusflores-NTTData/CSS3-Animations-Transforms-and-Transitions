@@ -1,0 +1,55 @@
+/* 
+
+Animation Timing Functions
+
+The animation-timing-function property specifies the speed curve of the animation.
+
+animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n) | steps(n,start|end)
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: cornflowerblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+
+  .typing-text {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+    overflow: hidden;
+    border-right: 0.15em solid white;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: 0.05em;
+    padding: 1rem;
+    animation: typing 10s steps(124, start) infinite,
+      caret 0.5s step-end infinite;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}

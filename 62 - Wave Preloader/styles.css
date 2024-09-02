@@ -1,0 +1,73 @@
+/* 
+
+Animation Timing Functions
+
+The animation-timing-function property specifies the speed curve of the animation.
+
+animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n) | steps(n,start|end)
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.wave-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  .wave {
+    height: 25px;
+    width: 25px;
+    background-color: rgb(0, 136, 255);
+    border-radius: 25%;
+    animation: wave 0.5s infinite;
+
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    &:nth-child(4) {
+      animation-delay: 0.4s;
+    }
+    &:nth-child(5) {
+      animation-delay: 0.5s;
+    }
+  }
+}
+
+@keyframes wave {
+  0% {
+    height: 25px;
+    background-color: rgb(0, 136, 255);
+    opacity: 1;
+  }
+  50% {
+    height: 50px;
+    background-color: rgba(137, 47, 255, 0.872);
+    opacity: 0.5;
+  }
+  100% {
+    height: 25px;
+    background-color: rgb(0, 136, 255);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,54 @@
+/* 
+
+Animation Timing Functions
+
+The animation-timing-function property specifies the speed curve of the animation.
+
+animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n) | steps(n,start|end)
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+}
+
+.box {
+  height: 150px;
+  width: 150px;
+  background-color: rgb(13, 137, 245);
+  animation: rotateSquareScaleAndCircle 2s infinite;
+}
+
+@keyframes rotateSquareScaleAndCircle {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-radius: 0%;
+  }
+  25% {
+    transform: rotate(90deg) scale(0.5);
+    border-radius: 50%;
+  }
+  50% {
+    transform: rotate(180deg) scale(1);
+    border-radius: 0%;
+  }
+  75% {
+    transform: rotate(270deg) scale(0.5);
+    border-radius: 50%;
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}

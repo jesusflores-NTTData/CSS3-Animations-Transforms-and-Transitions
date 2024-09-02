@@ -1,0 +1,41 @@
+/* 
+
+Animation Timing Functions
+
+The animation-timing-function property specifies the speed curve of the animation.
+
+animation-timing-function: ease | linear | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n) | steps(n,start|end)
+
+*/
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: cornflowerblue;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+
+  .wrapper {
+    height: 400px;
+    width: 400px;
+    border: 4px solid white;
+    position: relative;
+    perspective: 200px;
+    perspective-origin: left;
+    .box {
+      height: 400px;
+      width: 400px;
+      background-color: rgb(229, 255, 29);
+      transform: translateZ(-100px);
+    }
+  }
+}
